@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — Good Snout</title>
+<meta name="description" content="We sniffed every corner, but this page isn't here. Head back to Good Snout for real food for very good dogs.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#C7F9FD">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"></noscript>
+<style>
+  :root { --aqua: #C7F9FD; --ink: #111111; --green: #00978D; --orange: #F99D1B; --blue: #006EB8; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
+  body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: var(--aqua); color: var(--ink); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 700; overflow-x: clip; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  h1 { margin: 0; text-wrap: balance; }
+  p { margin: 0; text-wrap: pretty; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 48px; width: 100%; }
+  .brand { font-family: 'Gaegu', cursive; font-weight: 700; }
+
+  .doodle-box { border: 3.5px solid var(--ink); border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; border: 2.5px solid var(--ink); border-radius: 120px 110px 125px 95px/95px 130px 105px 120px; padding: 5px 16px; font-size: 13px; font-weight: 800; background: var(--aqua); }
+  .pill .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; border: 3.5px solid var(--ink); border-radius: 255px 25px 225px 25px/25px 225px 25px 255px; padding: 15px 30px; font: 800 18px/1 'Plus Jakarta Sans', sans-serif; transition: transform .15s ease, background .15s ease, color .15s ease; }
+  .btn:hover { transform: scale(1.03) rotate(-.6deg); }
+  .btn.dark { background: var(--green); color: var(--ink); }
+  .btn.light { background: var(--aqua); color: var(--ink); }
+  .btn.light:hover { background: var(--ink); color: var(--aqua); }
+  .btn.accent { background: var(--orange); color: var(--ink); }
+  .btn.accent:hover { background: var(--ink); color: var(--aqua); }
+  .halftone { background-image: radial-gradient(var(--ink) 20%, transparent 22%), radial-gradient(var(--ink) 20%, transparent 22%); background-size: 16px 16px; background-position: 0 0, 8px 8px; }
+
+  header { border-bottom: 3.5px solid var(--ink); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo img { width: 50px; }
+  .logo span { font-size: 38px; line-height: 1; padding-top: 4px; }
+  header .btn { padding: 12px 24px; font-size: 16px; }
+
+  main { flex: 1; display: flex; align-items: center; padding: 64px 0; }
+  main .wrap { display: grid; grid-template-columns: 6fr 5fr; gap: 48px; align-items: center; }
+  main .wrap > * { min-width: 0; }
+  .copy { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .copy h1 { font-size: clamp(40px, 5.4vw, 70px); font-weight: 800; letter-spacing: -.035em; line-height: 1.04; }
+  .copy p { font-size: clamp(18px, 1.8vw, 22px); line-height: 1.45; font-weight: 600; max-width: 520px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  .card { position: relative; background: var(--aqua); padding: 22px 24px; }
+  .dot-badge { position: absolute; top: -18px; right: -18px; width: 82px; height: 82px; border-radius: 50%; border: 3px solid var(--ink); background-color: var(--blue); }
+  .scene { position: relative; width: 100%; aspect-ratio: 10 / 9; clip-path: inset(-22px -24px 0 -24px); }
+  .ground { position: absolute; left: 0; right: 0; bottom: 3%; width: 100%; height: 8%; }
+  .bowl { position: absolute; left: 1%; bottom: 6.6%; width: 26%; }
+  .dog { position: absolute; left: 27%; bottom: 6.8%; width: 70%; animation: sniff-around 4.8s ease-in-out infinite; }
+  .dog-walk { position: relative; }
+  .dog-body { position: relative; z-index: 1; width: 100%; }
+  .tail { position: absolute; inset: 0; z-index: 0; width: 100%; transform-origin: 88.29% 32.25%; animation: wag 1.8s ease-in-out infinite; }
+  .huh { position: absolute; font-family: 'Gaegu', cursive; font-weight: 700; line-height: 1; animation: huh 2.4s ease-in-out infinite; }
+  .huh.one { left: 27%; top: 22%; font-size: 54px; }
+  .huh.two { left: 41%; top: 12%; font-size: 38px; animation-delay: .8s; }
+  .huh.three { left: 7%; top: 36%; font-size: 30px; animation-delay: 1.6s; }
+  .caption { border-top: 3px solid var(--ink); margin-top: 6px; padding-top: 12px; font-size: 20px; }
+
+  @keyframes sniff-around { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(4%); } 55% { transform: translateX(-1.5%); } 75% { transform: translateX(2%); } }
+  @keyframes wag { 0%, 60%, 100% { transform: rotate(0); } 68% { transform: rotate(-7deg); } 76% { transform: rotate(6deg); } 84% { transform: rotate(-6deg); } 92% { transform: rotate(5deg); } }
+  @keyframes huh { 0%, 100% { transform: translateY(0) rotate(-6deg) scale(1); } 50% { transform: translateY(-10px) rotate(6deg) scale(1.08); } }
+  @media (prefers-reduced-motion: reduce) { .dog, .tail, .huh { animation: none; } }
+
+  .wave { overflow: hidden; padding: 12px 0; line-height: 0; }
+  .wave svg { width: 100%; height: 34px; display: block; }
+  .wave path { fill: none; stroke: var(--ink); stroke-width: 4.5; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  footer { padding: 28px 0 32px; }
+  footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; font-weight: 600; }
+  footer .brand { font-size: 26px; }
+
+  @media (max-width: 900px) {
+    .wrap { padding: 0 24px; }
+    main { padding: 40px 0; }
+    main .wrap { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    .logo span { font-size: 30px; }
+    .logo img { width: 40px; }
+    header .btn { padding: 10px 16px; font-size: 14px; }
+    .caption { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="/" class="logo"><img src="/img/logo.webp" alt="" width="220" height="206"><span class="brand">Good Snout</span></a>
+    <a href="/#plan" class="btn dark">Build my plan</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="copy">
+      <span class="pill"><span class="dot"></span>error 404</span>
+      <h1>This page went walkies.</h1>
+      <p>We sniffed every corner, but there's nothing here. Let's get you back to the good stuff.</p>
+      <div class="ctas">
+        <a href="/" class="btn dark">Back to home <span>→</span></a>
+        <a href="/#recipes" class="btn light accent">See recipes</a>
+      </div>
+    </div>
+    <div class="card doodle-box">
+      <div class="dot-badge halftone"></div>
+      <div class="scene" role="img" aria-label="A dog sniffing an empty food bowl, puzzled">
+        <svg class="ground" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 5 C 30 4.6, 60 5.4, 99 5" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M16 9 C 40 8.7, 60 9.3, 74 9" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+        <img class="bowl" src="/img/bowl-empty.webp" alt="" width="480" height="363">
+        <div class="dog"><div class="dog-walk">
+          <img class="tail" src="/img/dog2-tail.webp" alt="" width="760" height="616">
+          <img class="dog-body" src="/img/dog2-body.webp" alt="" width="760" height="616">
+        </div></div>
+        <span class="huh one" aria-hidden="true">?</span><span class="huh two" aria-hidden="true">?</span><span class="huh three" aria-hidden="true">?</span>
+      </div>
+      <p class="caption brand">Barnaby is looking for it too.</p>
+    </div>
+  </div>
+</main>
+
+<div class="wave" aria-hidden="true"><svg viewBox="0 0 1200 30" preserveAspectRatio="none"><path d="M0 15 Q 30 4, 60 15 T 120 15 T 180 15 T 240 15 T 300 15 T 360 15 T 420 15 T 480 15 T 540 15 T 600 15 T 660 15 T 720 15 T 780 15 T 840 15 T 900 15 T 960 15 T 1020 15 T 1080 15 T 1140 15 T 1200 15"/></svg></div>
+<footer>
+  <div class="wrap"><span class="brand">Good Snout</span><span>© Good Snout Small-Batch Dog Food Co. Hand-cooked with love.</span></div>
+</footer>
+</body>
+</html>
