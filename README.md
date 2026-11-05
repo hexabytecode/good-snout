@@ -6,4 +6,4 @@ Plain static site, no build step: `index.html`, `404.html` and `img/`.
 
 - **Run locally:** `python3 -m http.server 8765` in this folder, then open http://localhost:8765
 - **Images:** the site uses the `.webp` files; the matching `.png` files are their full-size sources.
-- **Before launch:** replace `https://www.goodsnout.example` (canonical, share image, sitemap) with the real domain.
+- **Live:** https://good-snout-site.vercel.app (Vercel, deploys on every push to `main`). If it moves to its own domain, update the address in `index.html` (canonical, share image), `robots.txt` and `sitemap.xml`.
